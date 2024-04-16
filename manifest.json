@@ -3,10 +3,14 @@
   "name": "Tab Focus Mover",
   "description": "SI 539 Final Project. Assists with tab-index-related development and assessment by locating and showing Tab positioning on current webpage.",
   "version": "1.0",
-  "content_scripts": [
-    {
-      "js": ["scripts/script.js"],
-      "matches": ["<all_urls>"]
-    }
+  "background": {
+    "service_worker": "scripts/script.js"
+  },
+  "action": {
+    "default_title": "Enable Tab location"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
   ]
 }
