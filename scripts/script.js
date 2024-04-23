@@ -4,8 +4,9 @@ const buildTabs = () => {
         focusables.push(focusable);
         focusable.addEventListener('focus', () => {
             const rect = focusable.getBoundingClientRect();
+            console.log(rect);
             const newDiv = document.createElement('div');
-            newDiv.classList.add('extention-generated');
+            newDiv.classList.add('extension-generated');
             newDiv.style.width = rect.width + 10;
             newDiv.style.height = rect.height + 10;
             newDiv.style.left = rect.x - 5;
